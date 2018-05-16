@@ -114,7 +114,14 @@ namespace Calculator
 
         private void decimalButton_Click(object sender, RoutedEventArgs e)
         {
-            // resultLabel.Content = $"{resultLabel.Content}{selectedValue}";
+            if (resultLabel.Content.ToString().Contains("."))
+            {
+                // Do Nothing
+            }
+            else
+            {
+                resultLabel.Content = $"{resultLabel.Content}.";
+            }
         }
 
         private void numberButton_Click(object sender, RoutedEventArgs e)
